@@ -1,28 +1,31 @@
-resultsFirstPage10ForPage = ["UK votes to leave EU",
-                             "F.C.C. Repeals Net Neutrality Rules",
-                             "EU approves internet copyright law, including ‘link tax’ and ‘upload filter’",
-                             "Switch from Chrome to Firefox",
-                             "W3C abandons consensus, standardizes DRM, EFF resigns",
-                             "Tim Cook Speaks Up",
-                             "A Message to Our Customers",
-                             "Don't Fly During Ramadan",
-                             "SpaceX’s Falcon Heavy successfully launches",
-                             "macOS High Sierra: Anyone can login as “root” with empty password"]
+resultsFirstPage10ForPage = [
+{'title': 'UK votes to leave EU', 'num_comments': 2531, 'index': 1},
+{'title': 'F.C.C. Repeals Net Neutrality Rules', 'num_comments': 1397, 'index': 2},
+{'title': 'EU approves internet copyright law, including ‘link tax’ and ‘upload filter’', 'num_comments': 1010, 'index': 3},
+{'title': 'Switch from Chrome to Firefox', 'num_comments': 981, 'index': 4},
+{'title': 'W3C abandons consensus, standardizes DRM, EFF resigns', 'num_comments': 978, 'index': 5},
+{'title': 'Tim Cook Speaks Up', 'num_comments': 974, 'index': 6},
+{'title': 'A Message to Our Customers', 'num_comments': 967, 'index': 7},
+{'title': "Don't Fly During Ramadan", 'num_comments': 961, 'index': 8},
+{'title': 'SpaceX’s Falcon Heavy successfully launches', 'num_comments': 872, 'index': 9},
+{'title': 'macOS High Sierra: Anyone can login as “root” with empty password', 'num_comments': 813, 'index': 10},
+]
+
 
 dataToCreateDTOMethod =  [[{'title': 'UK votes to leave EU', 'num_comments': 2531}, {'title': 'Falcon Heavy successfully launches', 'num_comments': 872}],
 [ {'title': 'Silicon Valley Women', 'num_comments': 730}],
 [{'title': 'AMP for email is a terrible idea', 'num_comments': 465}, {'title': 'FTC Probing Facebook', 'num_comments': 371}, {'title': 'WhatsApp co-founder', 'num_comments': 628}, {'title': 'Hijack of Amazon', 'num_comments': 284}]]
 
-firstPageTake5Res = ["UK votes to leave EU",
-"Falcon Heavy successfully launches",
-"Silicon Valley Women",
-"WhatsApp co-founder",
-"AMP for email is a terrible idea"]
 
-secondPageTake3Res = ["WhatsApp co-founder",
-"AMP for email is a terrible idea",
-"FTC Probing Facebook"]
+firstPageTake5Res= [{'title': 'UK votes to leave EU', 'num_comments': 2531, 'index': 1},
+{'title': 'Falcon Heavy successfully launches', 'num_comments': 872, 'index': 2},
+{'title': 'Silicon Valley Women', 'num_comments': 730, 'index': 3},
+{'title': 'WhatsApp co-founder', 'num_comments': 628, 'index': 4},
+{'title': 'AMP for email is a terrible idea', 'num_comments': 465, 'index': 5}]
 
+secondPageTake3Res = [{'title': 'WhatsApp co-founder', 'num_comments': 628, 'index': 4},
+{'title': 'AMP for email is a terrible idea', 'num_comments': 465, 'index': 5},
+{'title': 'FTC Probing Facebook', 'num_comments': 371, 'index': 6}]
 page1 = {
     "page": 1,
     "per_page": 10,
