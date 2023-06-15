@@ -23,11 +23,30 @@ article is the `title` field value in the article information, if there is no `t
 article with the most comments next.
 
 ## Solution
-Here is my solution. Added pagination so it is possible to get 2nd,3rd... pages aswell. Output is just a list of strings containing article titles/story titles as was requested. Articles that do not have comments they are taken away. 
+This is my solution. It contains pagination so it is possible to get 2nd,3rd... pages aswell. Default output is together with index and comment count. Title is taken from input as was requested it is whether title or story as was requested. Articles that do not have comments they are taken away. 
 API calls have made asynchronous. With `singlePageJSON` method every page entry is reduced to `title` and `num_comments` objects within asynchronous tasks so overload issues have been taken into account.
 
-To run this program:
-``` python main.py ```
+This program mainly uses native Python Libraries, but it also have `aiohttp`, so you might need to download this aswell  
 
-To run tests:
+Solution for this hometask is run by:  
+``` python main.py --list```
+
+You can also run this with arguments `--help` or `-h`, `--list`, `--no_comments`. Default `--page` is 1 and `--per_page` is 10, but you can change them.  
+
+For example command:  
+`python main.py --page 2 --per_page 7`
+
+will give output:  
+```
+ID      Title                                                   Comments
+8       Don't Fly During Ramadan                                961
+9       SpaceX’s Falcon Heavy successfully launches             872
+10      macOS High Sierra: Anyone can login as “root” with e... 813
+11      Chrome 69 will keep Google Cookies when you tell it ... 810
+12      Paradise Papers: Dear Tim Cook                          791
+13      Pardon Snowden                                          781
+14      How Uber Used Secret “Greyball” Tool to Deceive Auth... 764
+```
+
+There are also tests in this project. To run tests:  
 ``` python -m unittest ```
