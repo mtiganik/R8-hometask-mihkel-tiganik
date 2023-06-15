@@ -19,7 +19,9 @@ def createDTO(res, page, per_page):
     res = [item for sublist in res for item in sublist]
     res.sort(key=lambda x: x.get('num_comments'), reverse=True) 
     res = res[per_page*(page-1):per_page*page]
-    return [x['title'] for x in res]
+    for i,x in enumerate(res):
+        x['index'] = per_page*(page-1) + i+1
+    return res
 
 def singlePageJSON(data):
     resData = []
