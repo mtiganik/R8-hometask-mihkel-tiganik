@@ -38,7 +38,7 @@ async def getPageCnt(url):
 
 async def fetch(session, url):
     async with session.get(url) as response:
-        return await response.text()
+        return await response.json()
 
 async def filterByComment(url,page,per_page=10):
     pageCnt = await getPageCnt(url)
@@ -49,7 +49,7 @@ async def filterByComment(url,page,per_page=10):
             tasks.append(fetch(session, url))
         JSONs = await asyncio.gather(*tasks)
         for JSON in JSONs:
-            res.append(singlePageJSON(json.loads(JSON)['data']))
+            res.append(singlePageJSON(JSON['data']))
     return createDTO(res,page,per_page)
 
 
