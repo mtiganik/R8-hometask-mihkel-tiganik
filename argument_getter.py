@@ -1,15 +1,7 @@
 import sys, getopt 
 
-
-DEFAULT_PAGE = 1
-DEFAULT_PER_PAGE = 10
-DEFAULT_COMMENTS_COUNT_DISABLED = False
-DEFAUlt_SHOW_IN_LIST = False
-
-def getDefaults():
-    return {'page':DEFAULT_PAGE, 'per_page':DEFAULT_PER_PAGE, 'no_comment':DEFAULT_COMMENTS_COUNT_DISABLED, 'list': DEFAUlt_SHOW_IN_LIST}
+from constants import getDefaults
     
-
 def generateHelp():
     str1 = 'This is an example program to fetch data from https://jsonmock.hackerrank.com/api/articles. \nIt sorts articles by number of comments that they have. It will make list.'
     str2 = 'By just running it it will give you top 10 articles with most comments'
