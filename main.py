@@ -1,9 +1,9 @@
-from filter_by_comment import filterByComment
-import asyncio
-from argument_getter import getArgs
-from constants import getUrl
-from resultGenerator import generateResult
 import sys
+import asyncio
+from constants import getUrl
+from services.comment_filter_service import filterByComment
+from services.argument_service import getArgs
+from services.command_view_service import generateResult
 
 
 def main(argv):
@@ -18,7 +18,6 @@ def main(argv):
     print(header)
     for x in dataToDisplay:
         print(x)
-
 
 if __name__ == "__main__":
     main(sys.argv[1:])

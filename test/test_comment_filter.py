@@ -2,7 +2,7 @@ from unittest import TestCase
 from unittest.mock import patch
 import asyncio
 
-from filter_by_comment import filterByComment, singlePageJSON, createDTO, getUrls
+from services.comment_filter_service import filterByComment, singlePageJSON, createDTO, getUrls
 from test_models import page1, resultsFirstPage10ForPage, dataToCreateDTOMethod, firstPageTake5Res, secondPageTake3Res
 
 class TestFilterByComments(TestCase):
