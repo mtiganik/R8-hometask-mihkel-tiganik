@@ -1,9 +1,9 @@
 import sys
 import asyncio
 from constants import getUrl
-from services.comment_filter_service import filterByComment
-from services.argument_service import getArgs
-from services.command_view_service import generateResult
+from comment_filter_service import filterByComment
+from argument_service import getArgs
+from command_view_service import generateResult
 
 
 def main(argv):
